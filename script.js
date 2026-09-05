@@ -7,6 +7,7 @@ const musicControl = document.querySelector(".music-control");
 const musicButton = musicControl?.querySelector(".music-button");
 const musicInput = musicControl?.querySelector("input");
 const audio = musicControl?.querySelector("audio");
+let autoplayFallbackArmed = false;
 
 const setMenu = (open) => {
   body.classList.toggle("menu-open", open);
