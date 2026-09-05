@@ -768,6 +768,102 @@ p {
     linear-gradient(180deg, rgba(255, 250, 242, 0.72), rgba(223, 207, 189, 0.35));
 }
 
+.grow-together {
+  background:
+    linear-gradient(90deg, rgba(255, 250, 242, 0.88), rgba(223, 207, 189, 0.38)),
+    var(--cream);
+  border-top: 1px solid var(--line);
+}
+
+.growth-layout,
+.fight-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.72fr);
+  gap: clamp(24px, 5vw, 70px);
+  align-items: stretch;
+  margin-top: clamp(32px, 5vw, 64px);
+}
+
+.growth-copy,
+.fight-copy {
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.growth-copy p,
+.fight-copy p,
+.future-statement {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: clamp(17px, 1.35vw, 21px);
+  line-height: 1.66;
+}
+
+.growth-copy p + p,
+.fight-copy p + p,
+.future-statement + .future-statement {
+  margin-top: 14px;
+}
+
+.growth-vow,
+.fight-truth {
+  display: flex;
+  min-height: 280px;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(28px, 4vw, 52px);
+  box-shadow: 0 20px 60px rgba(35, 22, 15, 0.09);
+}
+
+.growth-vow {
+  background: rgba(255, 250, 242, 0.72);
+  border-left: 1px solid rgba(47, 111, 143, 0.36);
+}
+
+.growth-vow p,
+.fight-truth p,
+.core-message {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(31px, 4vw, 58px);
+  font-weight: 400;
+  line-height: 1.04;
+}
+
+.growth-vow p + p,
+.fight-truth p + p {
+  margin-top: 18px;
+}
+
+.core-message {
+  max-width: 1120px;
+  margin: clamp(38px, 7vw, 84px) 0 0;
+  color: var(--brown);
+}
+
+.when-we-fight {
+  background: var(--charcoal);
+  color: var(--cream);
+}
+
+.when-we-fight .kicker,
+.when-we-fight .section-heading h2 {
+  color: var(--cream);
+}
+
+.fight-copy {
+  border-color: rgba(255, 250, 242, 0.2);
+}
+
+.fight-copy p {
+  color: rgba(255, 250, 242, 0.84);
+}
+
+.fight-truth {
+  border-left: 1px solid rgba(255, 250, 242, 0.26);
+  background: rgba(255, 250, 242, 0.06);
+}
+
 .future {
   min-height: 82svh;
 }
@@ -783,7 +879,7 @@ p {
 }
 
 .future-copy {
-  max-width: 520px;
+  max-width: 660px;
 }
 
 .future ul {
@@ -890,6 +986,11 @@ p {
 @media (max-width: 1100px) {
   .note-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .growth-layout,
+  .fight-grid {
+    grid-template-columns: 1fr;
   }
 
   .values {
