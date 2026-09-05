@@ -802,7 +802,7 @@ p {
   min-height: 86svh;
   background:
     linear-gradient(rgba(24, 17, 14, 0.88), rgba(24, 17, 14, 0.88)),
-    url("assets/future-original.png") center bottom / cover;
+    url("future-original.png") center bottom / cover;
   color: var(--cream);
   text-align: center;
 }
